@@ -37,14 +37,18 @@ class Videojuegos
 		$descripcion = $this->descripcion;
 		$empresa =$this->empresa;
 
-		$this->pdo->exec("INSERT INTO videojuegos(nombre,fechasalida,descripcion,empresa,plataforma) VALUES('$nombre','$fechasalida','$descripcion','$empresa','$plataforma')");
+		$this->pdo->exec("INSERT INTO videojuego(nombre,fechasalida,descripcion,empresa,plataforma) VALUES('$nombre','$fechasalida','$descripcion','$empresa','$plataforma')");
 	}
 	public function getVideojuegos(){
 		$pdo = ConnectDB::getInstance();
-		$pre = $pdo->prepare("SELECT * FROM videojuegos");
+		
+		$pre = $pdo->prepare("SELECT * FROM videojuego");
+		$pre->execute();
+		return $pre->fetchAll();
 	}
+
 	public function getVideojuegosById($id){
-		$pdo = ConnectDB::getInstance();
+		
 		$videojuegos = self::getVideojuegos();
 		foreach ($videojuegos as $key => $videojuego) {
 			if ($videojuego['id']== $id) {
