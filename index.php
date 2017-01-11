@@ -3,6 +3,7 @@ require_once "Modules/config.php";
 require_once "Modules/Entity/ConnectDB.php";
 require_once "Modules/Entity/Videojuegos.php";
 
+
  ?>
 <!DOCTYPE html>
 <html lang="en">

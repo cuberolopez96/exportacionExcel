@@ -9,20 +9,47 @@ a{
 	text-decoration: none;
 
 }
+.btn{
+	padding: 0.5em 1em;
+	margin: 2% 0;
+	border:none;
+	background: var(--color-principal);
+	color: white;
+	font-family: 'Roboto',sans-serif;
+}
+form{
+	width: 90%;
+	margin: 5% 5%;
+}
 header{
 	width:100%;
 	background: var(--color-principal);
 	color: white;
-	display: flex;
-	flex-direction: row;
 	line-height: 2em;
 	font-family: 'Roboto',sans-serif;
+}
+header h1,h2,h3,h4,h5,h6{
+	display: inline-block;
+	margin: 0 2%;
 }
 header a{
 	color:white;
 }
+
+input[type=text],input[type=password]{
+	width: 100%;
+	line-height: 1.5em;
+}
+
+label{
+	display: block;
+	font-family: 'Roboto',sans-serif;
+	line-height: 1.5em;
+}
 .right{
+	display: inline-block;
 	float: right;
+	margin: 0 2%;
 }
 table{
 	width: 90%;

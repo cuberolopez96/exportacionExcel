@@ -27,7 +27,7 @@ class Videojuegos
 		return $this;
 	}
 	public function setPlataforma($plataforma){
-		$this->plataformas=$plataforma;
+		$this->plataforma=$plataforma;
 		return $this;
 	}
 	public function save(){
